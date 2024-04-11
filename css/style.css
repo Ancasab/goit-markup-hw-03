@@ -16,8 +16,25 @@ body {
 font-family: var(--primary-font);
 color: var(--black);
 }
+/* Tb sa folosim 2 noi clase generice: container si section */
+.container {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+    /* border: 2px dashed red; */
+}
+.section {
+    padding: 94px 0;
+}
 /* Header section style*/
 
+.container.header {
+    height: 80px;
+    justify-content:space-around;
+    align-items: center;
+    /* gap: 240px; */
+   margin-bottom: 1px solid #ECECEC/* ; De verificat marginea */
+}
 .header__logo a,
  .footer__logo a {
     font-family: var(--secondary-font);
@@ -32,16 +49,26 @@ color: var(--black);
     color: var(--blue)
 }
 
-.header__navigation ul,
-.portfolio__navigare ul {
+
+.header__navigation ul {
     list-style: none;
+    display: flex;
+    width: 275px;
+    /* gap: 108px; */
+    justify-content: space-between;
 }
 
 .header__navigation a {
     color: var(--black)
 } 
+.header__info {
+    display: flex;
+    width: 275px;
+    /* gap: 108px; */
+    justify-content: space-between;
+}
 .header__navigation a,
- .header__info a {
+.header__info a {
     text-decoration: none;
     /* font-family: var(--primary-font); */
     font-weight: 500;
@@ -61,8 +88,13 @@ color: var(--black);
 /* Hero section style*/
 
 
-.hero-section__container {
+.hero-section.container {
+    height: 600px;
     text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
     background-color: var(--black-background);
     color: var(--white);
     /* font-family: var(--primary-font); */
@@ -72,7 +104,7 @@ color: var(--black);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
-
+    letter-spacing: 0.06em;
 }
 .hero-section__service {
     font-weight: 700;
@@ -80,21 +112,27 @@ color: var(--black);
     line-height: 1.9;
     background-color: var(--blue);
     color: var(--white);
-    cursor: pointer
+    cursor: pointer;
 }
 .hero-section__service:hover,
 .hero-section__service:focus {
     transform: scale(1.1);
 }
-.hero-section__features ul {
+
+
+.hero-section__features.container {
     list-style: none;
-    /* font-family: var(--primary-font); */
+    justify-content:space-between ;
+    /* width: 1170px; */
+    margin-top: 94px;
+
 }
 
 .hero-section__features h5 {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
+    letter-spacing: 0.03em;
     /* color: var(--black) */
 }
 
@@ -102,11 +140,12 @@ color: var(--black);
     font-size: 14px;
     /* font-weight: 400; */
     line-height: 1.7;
-    color: var(--gray)
+    color: var(--gray);
+    letter-spacing: 0.03em;
 }
 /* What we do section style*/
 
-.we-do-section {
+.we-do-section.section {
     background-color: var(--white);
     text-align: center;
 }
@@ -114,21 +153,42 @@ color: var(--black);
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
     /* color: var(--black); */
 }
 
-/* Our Team section style*/
-.team-section {
+.we-do-section_images > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.we-do-section_images.container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* Our Team section style */
+.team-section.section {
     background-color: var(--gray-background);
-    /* font-family: var(--primary-font); */
     text-align: center;
+    
 }
 .team-section__title {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.2;
-    /* color: var(--black); */
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
 }
+.team-section__cards.container {
+    justify-content:center;
+    gap: 30px;
+}
+
+
+
 .team-section__card__nume {
     font-weight: 500;
     font-size: 16px;
@@ -163,6 +223,10 @@ color: var(--black);
 }
    
  /* Portofoliu style */
+
+ .portfolio__navigare ul {
+    list-style: none;
+ }
 
  /* butoanele de navigare*/
  .portfolio__navigare button {
