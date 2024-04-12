@@ -33,14 +33,13 @@ color: var(--black);
 .header.section {
     width: 1600px;
     padding: 0;
-    /* margin-bottom: 1px solid #ECECEC; De verificat marginea */
+    border-bottom: 1px solid #ECECEC;
 }
 .header.container {
     height: 80px;
     justify-content:space-between;
     align-items: center;
-    padding: 0 15px
-   /* margin-bottom: 1px solid #ECECEC; De verificat marginea */
+    padding: 0 15px;
 }
 .header__logo a,
 .footer__logo a {
@@ -281,8 +280,6 @@ color: var(--black);
     cursor: pointer;
     padding: 6px 22px;
     border-radius: 4px 0px 0px 0px;
-    opacity: 0px;
-    /* padding: 6px; */
  }
  .portofoliu__navigare button:hover,
  .portofoliu__navigare button:focus {
