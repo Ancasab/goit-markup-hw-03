@@ -10,32 +10,40 @@
 }
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
+    box-sizing: border-box;
 }
 body {
 font-family: var(--primary-font);
 color: var(--black);
 }
 /* Tb sa folosim 2 noi clase generice: container si section */
+.section {
+    width: 1600px;
+    margin: 0 auto;
+    padding: 94px 0;
+}
 .container {
     width: 1200px;
     display: flex;
     margin: auto;
 }
-.section {
-    padding: 94px 0;
-}
-/* Header section style*/
 
-.container.header {
+/* Header section style*/
+.header.section {
+    width: 1600px;
+    padding: 0;
+    /* margin-bottom: 1px solid #ECECEC; De verificat marginea */
+}
+.header.container {
     height: 80px;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
-    /* gap: 240px; */
-   margin-bottom: 1px solid #ECECEC/* ; De verificat marginea */
+    padding: 0 15px
+   /* margin-bottom: 1px solid #ECECEC; De verificat marginea */
 }
 .header__logo a,
- .footer__logo a {
+.footer__logo a {
     font-family: var(--secondary-font);
     font-size: 26px;
     font-weight: 700;
@@ -83,9 +91,12 @@ color: var(--black);
 .header__info a:focus {
     color: var(--blue);
 }
-
 /* Hero section style*/
 
+.hero-section.section {
+    width: 1600px;
+    background-color: var(--black-background);
+}
 .hero-section.container {
     height: 600px;
     text-align: center;
@@ -93,7 +104,7 @@ color: var(--black);
     justify-content: center;
     align-items: center;
     /* flex-wrap: wrap; */
-    background-color: var(--black-background);
+    /* background-color: var(--black-background); */
     color: var(--white);
     /* font-family: var(--primary-font); */
  
@@ -117,40 +128,43 @@ color: var(--black);
     transform: scale(1.1);
 }
 
+/* What we do section style*/
 
-.hero-section__features.container {
+.we-do-section.section {
+    background-color: var(--white);
+}
+.we-do-section__features.container {
     list-style: none;
     justify-content:space-between ;
     width: 1170px; /* vs. clasa container cu 1200px */
-    margin-top: 94px;
+    margin-bottom: 94px;
 
 }
 
-.hero-section__features h5 {
+.we-do-section__features h5 {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    /* color: var(--black) */
+    margin-bottom: 10px;
 }
 
-.hero-section__features p {
+.we-do-section__features p {
     font-size: 14px;
     line-height: 1.7;
     color: var(--gray);
     letter-spacing: 0.03em;
 }
-/* What we do section style*/
 
-.we-do-section.section {
-    background-color: var(--white);
-    text-align: center;
-}
 .we-do-section__title {
     font-weight: 700;
     font-size: 36px;
+    color: var(--black);
     line-height: 1.2;
     letter-spacing: 0.03em;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .we-do-section_images > img {
@@ -167,9 +181,9 @@ color: var(--black);
 /* Our Team section style */
 .team-section.section {
     background-color: var(--gray-background);
+    height: 648px;
     text-align: center;
-    width: 1200px;
-    margin: auto;
+    /* margin: auto; */
 }
 .team-section__title {
     font-weight: 700;
@@ -181,45 +195,63 @@ color: var(--black);
 .team-section__cards.container {
     justify-content:center;
     gap: 30px;
+    margin: auto;
 }
 .team-section__card__nume {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
     letter-spacing: 0.03em;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 .team-section__card__job {
     font-size: 16px;
     line-height: 1.2;
     color: var(--gray);
+    margin-bottom: 30px;
 }
 
 /* Footer section style*/
 
+.footer.section {
+    width: 1600px;
+    /* height: 251px; */
+    padding: 0;
+    background-color: var(--black-background);
+}
 .footer.container {
     height: 251px;
-    background-color: var(--black-background);
     flex-direction: column; 
     justify-content:center;
+    align-items: stretch;
     
 }
 .footer__logo a {
     color: var(--white);
+    /* margin-top: 60px; */
+    /* margin-bottom: 28px; */
+    
 }
 .footer__address {
-    background-color: var(--black-background);
+    /* background-color: var(--black-background); */
     color: var(--white);
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 2
+    ;
     font-style: normal; 
-    align-self: baseline;
+    margin-top: 28px;
+
 }
 .footer__address a {
     color: var(--white);
     text-decoration: none;
-    cursor: pointer;
+    cursor: pointer; 
  } 
+.footer__address a {
+    color: var(--gray);
+}
 .footer__address a:hover,
 .footer__address a:focus {
     color: var(--blue);

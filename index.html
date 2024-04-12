@@ -4,23 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Studio</title>
-    <!-- <link
+    <!-- Normalizare stiluri/> -->
+
+    <link
       rel="stylesheet"
-      href="node_modules/modern-normalize/modern-normalize.css"
-    /> -->
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <!-- Import fonturi/> -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <!--Link la stiluri css /> -->
+
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!--header section-->
 
-    <header class="header">
-      <div class="container header">
+    <header class="header section">
+      <div class="header container">
         <div class="header__logo">
           <a href="#"
             ><p><span>Web</span>Studio</p></a
@@ -52,7 +58,11 @@
             Request our service
           </button>
         </div>
-        <ul class="hero-section__features container">
+      </section>
+      <!--What we do section-->
+
+      <section class="we-do-section section">
+        <ul class="we-do-section__features container">
           <li>
             <h5>ATTENTION TO DETAILS</h5>
             <p>
@@ -82,10 +92,6 @@
             </p>
           </li>
         </ul>
-      </section>
-      <!--What we do section-->
-
-      <section class="we-do-section section">
         <h2 class="we-do-section__title">What we do</h2>
         <!--div cu imagini-->
         <div class="we-do-section_images container">
@@ -163,17 +169,19 @@
       </section>
     </main>
     <!--Footer section-->
-    <footer class="footer container">
-      <div class="footer__logo">
-        <a href="#"
-          ><p><span>Web</span>Studio</p></a
-        >
+    <footer class="footer section">
+      <div class="footer container">
+        <div class="footer__logo">
+          <a href="#"
+            ><p><span>Web</span>Studio</p></a
+          >
+        </div>
+        <address class="footer__address">
+          695 Park Ave, NY 10065, USA <br />
+          <a href="mailto:info@devstudio.com">info@devstudio.com</a><br />
+          <a href="tel:+12127724150">+1 212-772-4150</a>
+        </address>
       </div>
-      <address class="footer__address">
-        695 Park Ave, NY 10065, USA <br />
-        <a href="mailto:info@devstudio.com">info@devstudio.com</a><br />
-        <a href="tel:+12127724150">+1 212-772-4150</a>
-      </address>
     </footer>
   </body>
 </html>
