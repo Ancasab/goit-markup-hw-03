@@ -229,12 +229,9 @@ color: var(--black);
 }
 .footer__logo a {
     color: var(--white);
-    /* margin-top: 60px; */
-    /* margin-bottom: 28px; */
     
 }
 .footer__address {
-    /* background-color: var(--black-background); */
     color: var(--white);
     font-weight: 400;
     font-size: 14px;
@@ -259,33 +256,65 @@ color: var(--black);
    
  /* Portofoliu style */
 
- .portfolio__navigare ul {
+ .portofoliu.section {
+    background-color: var(--white);
+    margin: auto;
+
+ }
+ 
+ .portofoliu__navigare__lista.container {
+    width: 1170px;
+    justify-content: center;
+    gap: 8px;
     list-style: none;
+    margin-bottom: 50px;
+  
  }
 
  /* butoanele de navigare*/
- .portfolio__navigare button {
+ .portofoliu__navigare button {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
     background-color: var(--gray-background);
-    cursor: pointer
+    cursor: pointer;
+    padding: 6px 22px;
+    border-radius: 4px 0px 0px 0px;
+    opacity: 0px;
+    /* padding: 6px; */
  }
- .portfolio__navigare button:hover,
- .portfolio__navigare button:focus {
+ .portofoliu__navigare button:hover,
+ .portofoliu__navigare button:focus {
     background-color: var(--blue);
     color: var(--white);
  }
  /* exemple din portofoliu*/
+
+ .portofoliu__exemple.container {
+    width: 1170px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: auto;
+ }
 .portofoliu__exemplu__nume {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
+    letter-spacing: 0.06em;
+    margin-left: 24px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    text-align: left;
 }
 .portofoliu__exemplu__tip {
     /* font-weight: 400; */
     font-size: 16px;
     line-height: 1.9;
-    color: var(--gray)
+    color: var(--gray);
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin-left: 24px;
+    margin-bottom: 20px;
 }
